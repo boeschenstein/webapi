@@ -2,7 +2,36 @@
 
 ASP.NET see: <https://github.com/boeschenstein/aspnet>
 
+## Routing
+
+### Add relative sub routes
+
+```cs
+[ApiController]
+[Route('api/mainroute')]
+public class MyControllerClass ...
+
+    [HttpPost('my/additional/subroute1')]
+    public async Task<IActionResult> MyEndpoint1Async ...
+
+    [Authorize(Policy = PfwPolicyRequirement.EditorOrAdmin)]
+    //[ProducesDefaultResponseType] todo what is this ?
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(typeof(IReadOnlyCollection<string>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(IReadOnlyCollection<string>), StatusCodes.Status404NotFound)]
+    [Produces("application/octet-stream")]
+    [HttpGet('my/additional/subroute2/{id:Guid}', Name = 'anothername')]
+    public async Task<IActionResult> MyEndpoint2Async ...
+```
+
 ## Move Controllers to other project/assembly
+
+This might need some nugets:
+
+```cs
+<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+<PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.5" />
+```
 
 ```cs
 var presentationAssembly = typeof(PresentationProj.AssemblyReference).Assembly;
