@@ -28,9 +28,9 @@ public class MyControllerClass ...
 
 ### Option 1)
 
-Use ASP.NET Core APIs in a class library
+Use ASP.NET Core APIs in a class library. Add this to your csproj:
 
-```cs
+```xml
   <!-- Use ASP.NET Core APIs in a class library -->
   <!-- https://learn.microsoft.com/en-us/aspnet/core/fundamentals/target-aspnetcore -->
   <ItemGroup>
@@ -39,13 +39,6 @@ Use ASP.NET Core APIs in a class library
 ```
 
 ### Option b)
-
-This might need some nugets:
-
-```cs
-<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
-<PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.5" />
-```
 
 program.cs:
 
@@ -56,6 +49,13 @@ services.AddControllers().AddApplicationPart(presentationAssembly);
 
 - Source: Clean Architecture With .NET 6 And CQRS - Project Setup by Milan Jovanović <https://youtu.be/tLk4pZZtiDY> Min 11:20
 - Docs: <https://learn.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts>
+
+This approach might need some nugets:
+
+```cs
+<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+<PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.5" />
+```
 
 ## File Download
 
