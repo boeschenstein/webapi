@@ -26,6 +26,16 @@ public class MyControllerClass ...
 
 ## Move Controllers to other project/assembly
 
+### Option 1)
+
+  <!-- Use ASP.NET Core APIs in a class library -->
+  <!-- https://learn.microsoft.com/en-us/aspnet/core/fundamentals/target-aspnetcore -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+### Option b)
+
 This might need some nugets:
 
 ```cs
