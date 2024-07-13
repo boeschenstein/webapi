@@ -28,11 +28,15 @@ public class MyControllerClass ...
 
 ### Option 1)
 
+Use ASP.NET Core APIs in a class library
+
+```cs
   <!-- Use ASP.NET Core APIs in a class library -->
   <!-- https://learn.microsoft.com/en-us/aspnet/core/fundamentals/target-aspnetcore -->
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+```
 
 ### Option b)
 
@@ -43,13 +47,15 @@ This might need some nugets:
 <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.5" />
 ```
 
+program.cs:
+
 ```cs
 var presentationAssembly = typeof(PresentationProj.AssemblyReference).Assembly;
 services.AddControllers().AddApplicationPart(presentationAssembly);
 ```
 
-- Source: <https://youtu.be/tLk4pZZtiDY> Min 11:20
-- Docs: <https://learn.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts?view=aspnetcore-7.0>
+- Source: Clean Architecture With .NET 6 And CQRS - Project Setup by Milan Jovanović <https://youtu.be/tLk4pZZtiDY> Min 11:20
+- Docs: <https://learn.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts>
 
 ## File Download
 
