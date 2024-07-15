@@ -44,6 +44,8 @@ program.cs:
 
 ```cs
 var presentationAssembly = typeof(PresentationProj.AssemblyReference).Assembly;
+
+// AddControllers() needs <FrameworkReference Include="Microsoft.AspNetCore.App" />
 services.AddControllers().AddApplicationPart(presentationAssembly);
 ```
 
