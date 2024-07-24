@@ -59,6 +59,27 @@ This approach might need some nugets:
 <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.5" />
 ```
 
+## Order of Middleware
+
+> The order that middleware components are added in the Program.cs file defines the order in which the middleware components are invoked on requests (and the reverse order for the response).
+> The order is critical for security, performance, and functionality.
+
+Use this recommended order:
+
+- Start: Request
+- ExceptionHandler
+- HSTS
+- HttpsRedirection (avoid this anyway: can do harm in OIDC scenario: does not forward security headers)
+- Static Files
+- Routing
+- CORS
+- Authentication
+- Authorization
+- Custom middlewares
+- Endpoint
+
+Source: <https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0#middleware-order>
+
 ## File Download
 
 ### Zip, using efficiant streams
