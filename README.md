@@ -190,3 +190,10 @@ public IActionResult Csv()
       }
     };
 ```
+
+## Information
+
+- Handle errors in ASP.NET Core controller-based web APIs
+  - UseExceptionHandler, UseStatusCodePages: <https://learn.microsoft.com/en-us/aspnet/core/web-api/handle-errors?view=aspnetcore-8.0>
+  - Translating Exceptions into Problem Details Responses <https://timdeschryver.dev/blog/translating-exceptions-into-problem-details-responses#>
+- Result Pattern <https://www.milanjovanovic.tech/blog/functional-error-handling-in-dotnet-with-the-result-pattern>
