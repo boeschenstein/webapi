@@ -197,3 +197,4 @@ public IActionResult Csv()
   - UseExceptionHandler, UseStatusCodePages: <https://learn.microsoft.com/en-us/aspnet/core/web-api/handle-errors?view=aspnetcore-8.0>
   - Translating Exceptions into Problem Details Responses <https://timdeschryver.dev/blog/translating-exceptions-into-problem-details-responses#>
 - Result Pattern <https://www.milanjovanovic.tech/blog/functional-error-handling-in-dotnet-with-the-result-pattern>
+- IMiddleware <https://www.milanjovanovic.tech/blog/3-ways-to-create-middleware-in-asp-net-core>
