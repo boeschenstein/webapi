@@ -80,6 +80,13 @@ Use this recommended order:
 
 Source: <https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0#middleware-order>
 
+## CaseInsensitive per default
+
+>The default JsonSerializerOptions values for web apps is case-insensitive.
+>The default for json-serializer is ´false` in general
+
+<https://stackoverflow.com/questions/70475942/asp-net-core-binding-case-sensitivity>
+
 ## File Download
 
 ### Zip, using efficiant streams
